@@ -1,0 +1,7 @@
+
+# version_file = rebase_path("version.txt",root_build_dir)
+# print("version_file: ", version_file)
+param = []
+param += rebase_path("version.txt",root_build_dir)
+version = exec_script("version.py", param, "value")
+print("Project version is", version)

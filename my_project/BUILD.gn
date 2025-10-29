@@ -1,0 +1,4 @@
+
+executable("hello_gn") {
+  sources = [ "main.cc", "print.hpp", "print.cc" ]
+}

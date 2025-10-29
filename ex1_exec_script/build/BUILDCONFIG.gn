@@ -1,0 +1,3 @@
+
+# 기본 빌드 설정을 정의합니다.
+set_default_toolchain("//build/toolchain:default")
