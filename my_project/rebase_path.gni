@@ -1,0 +1,4 @@
+group("rebase_path") {
+#   public_deps = []
+  print(rebase_path("rebase_path.gni"))
+}

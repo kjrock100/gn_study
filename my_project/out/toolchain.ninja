@@ -1,0 +1,11 @@
+rule stamp
+  command = touch ${out}
+  description = Stamping ${out}
+rule cxx
+  command = g++ -c ${in} -o ${out}
+  description = G++ ${in}
+rule link
+  command = g++ ${in} -o ${out} ${ldflags}
+  description = Linking ${out}
+
+subninja obj/hello_gn.ninja

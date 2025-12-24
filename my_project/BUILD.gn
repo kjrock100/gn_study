@@ -1,4 +1,21 @@
+# import("//rebase_path.gni")
+
 
 executable("hello_gn") {
   sources = [ "main.cc", "print.hpp", "print.cc" ]
+}
+
+
+
+group("rebase_path") {
+#   public_deps = []
+  print(rebase_path("rebase_path.gni"))
+  print(rebase_path("rebase_path.gni", root_build_dir))
+  print(rebase_path("rebase_path.gni", root_gen_dir))
+}
+
+group("write_file") {
+#   public_deps = []
+  # write_file("$target_gen_dir/write_file.txt", "test 입니다.")
+  write_file("$root_gen_dir/write_file.txt", "test 입니다.")
 }

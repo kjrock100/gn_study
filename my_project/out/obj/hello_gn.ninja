@@ -1,0 +1,17 @@
+root_out_dir = .
+target_output_name = hello_gn
+
+build obj/main.o: cxx ../main.cc
+  source_file_part = main.cc
+  source_name_part = main
+build obj/print.o: cxx ../print.cc
+  source_file_part = print.cc
+  source_name_part = print
+
+build ./hello_gn: link obj/main.o obj/print.o
+  ldflags =
+  libs =
+  frameworks =
+  swiftmodules =
+  output_extension =
+  output_dir =
